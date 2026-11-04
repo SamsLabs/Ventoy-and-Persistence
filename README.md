@@ -2,7 +2,11 @@
 This tutorial guides you on how to download Ventoy, Kubuntu, and add persistence to a USB on Windows 11 so it doesn't change the Drive on your computer. <br>
 ❗Not a tutorial to change or switch your main computer's OS❗<br>
 Ventoy lets you boot multiple operating systems (OS) from the same USB drive; it also lets you add persistence (so you don't lose the changes you make).<br>
-```[NOTE] I wanted to put Ventoy and the 64-bit download of Kubuntu 26.04 LTS, including KDE Plasma for more customization options with persistence (persistence_ext4_4GB_casper-rw.dat.7z)```
+```
+[NOTE]
+I wanted to put Ventoy and the 64-bit download of Kubuntu 26.04 LTS, including KDE Plasma for more
+customization options with persistence (persistence_ext4_4GB_casper-rw.dat.7z)
+```
 
 ## 📃Resources
 
@@ -62,6 +66,7 @@ More info on: https://www.ventoy.net/en/doc_disk_layout.html
 
 
 ### 4: Then configure persistence so your KDE customizations and files survive reboots.📍
+
 ➖Go back to the folder where you extracted ventoy-1.1.18-windows.<br>
 ➖Double-click VentoyPlugson.exe, and if Windows asks for permission, click Yes.<br>
 ➖it should open the following popup:<br>
@@ -75,20 +80,26 @@ More info on: https://www.ventoy.net/en/doc_disk_layout.html
 <img width="772" height="396" alt="image" src="https://github.com/user-attachments/assets/6fb70bc2-f573-40a1-8e6c-4f4fb2d809ca" /><br>
 ➖ Paste the file path to Kubuntu into the file path <br> it should look something like D:\kubuntu-26.04.1-desktop-amd64.iso<br>
 ➖ Don't click OK yet; we have to add the persistence file<br>
-➖A file named CreatePersistentImg.cmd should have been in the file ventoy-1.1.18-windows that we extracted earlier
- But I couldn't find it, so I had to go to the official Ventoy persistence backend releases<br>
+```
+[NOTE]
+A file named CreatePersistentImg.cmd should have been in the file ventoy-1.1.18-windows that we extracted earlier
+ But I couldn't find it, so I had to go to the official Ventoy persistence backend releases
+```
  https://github.com/ventoy/backend/releases<br>
+ 
 ➖look for the file named persistence_ext4_4GB_casper-rw.dat and download that (download images.zip file)<br>
 <img width="125" height="27" alt="image" src="https://github.com/user-attachments/assets/ba6acc4d-045b-453f-83cf-fe9e0200ca3c" /><br>
-➖i had to create a file to extract the persistence_ext4_4GB_casper-rw into, because it wasent showing up in my downloads after extracting it "normaly" onto my downloads<br>
+➖ I had to create a file to extract persistence_ext4_4GB_casper-rw into, because it wasn't showing up in my downloads after extracting it "normally" to my downloads<br>
 ➖Right-click persistence_ext4_4GB_casper-rw.dat and select Copy.<br>
-➖Then Paste the file directly into the main Ventoy (D:) drive, alongside your Kubuntu ISO and the ventoy folder.<br>
-➖in the Dat file underneth the file path put the path to your persistance file within the USB D: drive (For Example: D:\persistence_ext4_4GB_casper-rw.dat)<br>
-➖once you have both paths correct click okay then go to preview<br>
-➖the preview should look something like this:<br>
+➖Then paste the file directly into the main Ventoy (D:) drive, alongside your Kubuntu ISO and the Ventoy folder.<br>
+➖ In the .dat file, under the file path, put the path to your persistence file within the USB D: drive (For Example: D:\persistence_ext4_4GB_casper-rw.dat)<br>
+➖ Once you have both paths correct, click OK, then go to preview<br>
+➖ The preview should look something like this:<br>
 <img width="1537" height="792" alt="image" src="https://github.com/user-attachments/assets/5cfefdcd-90f6-403a-99b5-0aba174f53e4" /><br>
-```you can also  Verify the configuration before booting Kubuntu on the usb
-• In the ventoy folder, right-click ventoy.json. Choose Open with → Notepad. Look for the persistence section.
+```
+[NOTE]
+You can also  verify the configuration before booting Kubuntu on the USB. <br>
+• In the Ventoy folder, right-click ventoy.json. Choose Open with → Notepad. Look for the persistence section.
 • It should contain your Kubuntu ISO and persistence file paths, similar to this:
 
 {
@@ -102,19 +113,50 @@ More info on: https://www.ventoy.net/en/doc_disk_layout.html
     ]
 }
 ``` 
-➖Close the Plugson page. 
-➖If the Ventoy Plugson program is still open on your desktop, close that window too
-➖Safely eject the USB from the Windows taskbar
-❗Leave the SanDisk USB plugged into your computer after saftely ejecting it❗
+➖Close the Plugson page. <br>
+➖If the Ventoy Plugson program is still open on your desktop, close that window too. <br>
+➖Safely eject the USB from the Windows taskbar<br>
+❗Leave the SanDisk USB plugged into your computer after safely ejecting it❗
 <br>
-### Booting Kubuntu with persistance from USB
-➖after saftely ejecting the usb depending on what computer you have you will have to get to the BOOT Menue 
-```i have a NIMO laptop running win11 so i had to restart my computer and repediatly press F12 after the screen went dark to get to the BOOT Menu```
-➖
-<img width="1536" height="1152" alt="image" src="https://github.com/user-attachments/assets/ba00b5ba-4f66-467a-bcc0-5f7b71a6ec29" />
-<img width="1536" height="1152" alt="image" src="https://github.com/user-attachments/assets/1acda80f-637e-4eeb-837a-9e88c5f20689" />
-press any key once to open MOK management.
-Choose “Enroll key from disk.”
+
+### Booting Kubuntu with persistence from USB
+
+➖ After safely ejecting the USB and leaving it in, depending on what computer you have, there will be different ways to get to the BOOT Menu <br>
+```
+[NOTE]
+I have a Nimo laptop running Win11, so I had to restart my computer and repeatedly press F12 after the screen went dark
+to get to the BOOT Menu
+But I didn't want to use the new Nimo laptop I bought, so I used an old Lenovo laptop  :)
+```
+➖ Boot from your USB; mine was: UEFI: USB, Partition 2 (USB)<br>
+<img width="1536" height="1152" alt="image" src="https://github.com/user-attachments/assets/ba00b5ba-4f66-467a-bcc0-5f7b71a6ec29" /><br>
+```
+[NOTE]
+When I tried booting the USB on my Nimo laptop, it gave me some security stuff (MOK management) that I would have had to go around
+or authorize, so what I did
+is boot this USB on an old Lenovo laptop running Windows 10; that way, if anything went south, it would be on my old laptop,
+not my new one
+```
+<br>
+➖Choose “Enroll key from disk.<br>
+➖ From the Ventoy page, choose Kubuntu or whatever ISO you downloaded
+➖ Boot in normal mode
+<img width="1536" height="1152" alt="image" src="https://github.com/user-attachments/assets/1ed6c323-5842-42bd-9129-cc22b6e83575" />
+➖ Then choose boot with persistence
+<img width="1536" height="1152" alt="image" src="https://github.com/user-attachments/assets/a1acf0b0-880a-4bcc-93d6-4e9f31a394aa" />
+➖ Click Try or Install
+<img width="1536" height="1152" alt="image" src="https://github.com/user-attachments/assets/6e851505-d7a4-4df6-80eb-6fe6d10427de" />
+<img width="1536" height="1152" alt="image" src="https://github.com/user-attachments/assets/4b3eea1c-3045-4990-90b7-a865a050f5db" />
+<img width="1536" height="1152" alt="image" src="https://github.com/user-attachments/assets/edc88e89-f4be-4b35-a242-256b5b69e14c" />
+<img width="1536" height="1152" alt="image" src="https://github.com/user-attachments/assets/95441d66-9202-4bd1-a71e-8e3c2070aece" />
+
+## 📃Preview
+⏯️Video coming soon⏯️
+
+
+
+
+
 
 
 
