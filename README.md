@@ -11,7 +11,7 @@ customization options with persistence (persistence_ext4_4GB_casper-rw.dat.7z)
 ## 📃Resources
 
 * 32GB USB or larger
-* 64-bit download of Kubuntu 26.04 LTS, including KDE Plasma : https://www.kubuntu.org/download/
+* 64-bit download of Kubuntu 26.04 LTS, including KDE Plasma: https://www.kubuntu.org/download/
 * Ventoy2Disk.exe : https://www.ventoy.net/en/download.html
 <br>  
 
@@ -93,7 +93,7 @@ A file named CreatePersistentImg.cmd should have been in the file ventoy-1.1.18-
 ➖Right-click persistence_ext4_4GB_casper-rw.dat and select Copy.<br>
 ➖Then paste the file directly into the main Ventoy (D:) drive, alongside your Kubuntu ISO and the Ventoy folder.<br>
 ➖ In the .dat file, under the file path, put the path to your persistence file within the USB D: drive (For Example: D:\persistence_ext4_4GB_casper-rw.dat)<br>
-➖ Once you have both paths correct, click OK, then go to preview<br>
+➖ Once you have both paths correct, click OK, then go to Preview <br>
 ➖ The preview should look something like this:<br>
 <img width="1537" height="792" alt="image" src="https://github.com/user-attachments/assets/5cfefdcd-90f6-403a-99b5-0aba174f53e4" /><br>
 ```
@@ -115,7 +115,7 @@ You can also  verify the configuration before booting Kubuntu on the USB. <br>
 ``` 
 ➖Close the Plugson page. <br>
 ➖If the Ventoy Plugson program is still open on your desktop, close that window too. <br>
-➖Safely eject the USB from the Windows taskbar<br>
+➖Safely eject the USB from the Windows taskbar. <br>
 ❗Leave the SanDisk USB plugged into your computer after safely ejecting it❗
 <br>
 
